@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: settings
+#
+#  id              :integer          not null, primary key
+#  show_active     :boolean
+#  order_title     :integer
+#  show_order_then :date
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  show_active: false
+  order_title: 1
+  show_order_then: 2016-07-18
+
+two:
+  show_active: false
+  order_title: 1
+  show_order_then: 2016-07-18

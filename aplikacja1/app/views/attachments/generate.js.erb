@@ -1,0 +1,6 @@
+<% if @attachment.persisted? %>
+	$('#attachments tbody').append('<%= j render partial: "attachment", object: @attachment %>');
+<% else %>
+	alert('<%= @attachment.errors.messages %>');
+<% end %>
+$('#id-<%= @attachment.id %>').effect("highlight", {}, 3000);

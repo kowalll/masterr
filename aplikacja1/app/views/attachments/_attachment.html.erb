@@ -1,0 +1,10 @@
+<tr id="id-<%= attachment.id %>">
+	<td><%= attachment.article.title %></td>
+	<td><%= attachment.name %></td>
+	<td><%= attachment.url %></td>
+	<td><%= fa_icon( attachment.active? ? "check" : "eye-slash" )%></i></td>
+	<td><%= link_to 'Show', attachment %><i class="fa fa-eye-slash" aria-hidden="true"></i></td>
+	<td><%= link_to edit_attachment_path(attachment) do %><i class="fa fa-pencil-square-o"></i> Edit<% end %></td>
+	<td><%= link_to attachment, method: :delete, data: { confirm: 'jesteś tego pewien?' }, remote: true do %><i class="fa fa-exclamation-triangle"></i> Delete<% end %>
+	
+</tr>

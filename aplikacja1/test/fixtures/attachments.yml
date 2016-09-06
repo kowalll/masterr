@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: attachments
+#
+#  id         :integer          not null, primary key
+#  article_id :integer
+#  name       :string(255)
+#  url        :string(255)
+#  active     :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  position   :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  article_id: 
+  name: MyString
+  url: MyString
+  active: false
+
+two:
+  article_id: 
+  name: MyString
+  url: MyString
+  active: false

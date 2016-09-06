@@ -1,0 +1,47 @@
+<%console %>
+<p id="notice"><%= notice %></p>
+
+<h1><%= link_to 'Listing attachments' , attachments_path %></h1>
+<h2><%= link_to 'New Attachment', new_attachment_path %></h2>
+<h2><%= link_to 'Show active', link_builder( '/articles?', {"show_active" => "true"} ) %></h2>
+<h2><%= link_to 'Show inactive', link_builder( '/articles?', {"show_active" => "false"} ) %></h2>
+
+
+<h2><%= link_to 'Show asc', link_builder(  '/articles?', {"order_title" => "asc"}) %></h2>
+<h2><%= link_to 'Show desc', link_builder(  '/articles?', {"order_title" => "desc"}) %></h2>
+<h2><%= link_to 'Reset', articles_path %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Active</th>
+      <th>url</th>
+      <th>Created at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.content %></td>
+        <td><%= article.active %></td>
+        <td><%= article.url %></td>
+        <td><%= article.created_at %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Czy na pewno jesteś tego pewien ziomus?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Article', new_article_path %>
+<%= link_to 'Setting', edit_setting_path(1) %>
+
+<br />
+<%= @setting.inspect %>

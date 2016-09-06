@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Attachments<i class="fa fa-btc" aria-hidden="LISTING ATTACHMENTS"></i>
+</h1>
+
+<table id="attachments">
+  <thead>
+    <tr>
+      <th>Article</th>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Active</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @attachments %>
+  </tbody>
+</table>
+<div id = "show_destroyed"></div>
+<div id = "generate"></div>
+<br>
+
+<%= link_to new_attachment_path do %><i class="fa fa-cog"></i> Settings<% end %>
+<p><a href="" onclick="alert('Cycki !');">TEST_KOMUNIKAT</a></p>
+<p><a href="" onclick="customAlert('Cycki !' ); ">CYCKI</a></p>
+<script type="text/javascript">
+  function customAlert( ) {
+    alert('czesc.');
+  }
+</script>
+<p><a href="" onclick="serverSideAlert( );">CYCKI</a></p>
+<script type="text/javascript">
+  function serverSideAlert( ) {
+    var request = new XMLHttpRequest(  );
+    request.open('get', '/attachment', false);
+    request.send(null);
+    alert(request.responseText);
+  }
+</script> 
+
+<%= link_to 'Poka alert', show_alert_attachments_path, remote: true %>
+<%= link_to 'generation', generate_attachments_path, remote: true %>
