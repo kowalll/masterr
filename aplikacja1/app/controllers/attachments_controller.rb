@@ -45,6 +45,13 @@ class AttachmentsController < ApplicationController
     format.js { render :nothing => true }
   end
   end
+  def 
+  end
+    
+  end
+  def position
+    acts_as_list
+  end
   # GET /attachments/1
   # GET /attachments/1.json
   def show
