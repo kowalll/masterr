@@ -1,5 +1,5 @@
 class AttachmentsController < ApplicationController
-  before_action :set_attachment, only: [:show, :edit, :update, :destroy]
+  before_action :set_attachment, only: [:show, :edit, :update, :destroy, :position]
   before_action :get_all_articles, only: [:new, :create, :edit, :update, :position]
   respond_to :js, :json, :html
 

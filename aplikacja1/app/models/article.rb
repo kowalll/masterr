@@ -16,4 +16,6 @@ class Article < ActiveRecord::Base
 	validates :title, presence: true
     validates :title, uniqueness: true
     has_many :attachment
+    has_one :attachment_id
+    acts_as_list scope: :attachment_id
 end
