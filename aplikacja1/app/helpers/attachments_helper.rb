@@ -6,6 +6,18 @@ module AttachmentsHelper
 		fa_icon "fa-check"
 
 	end
+
+
+	def links( attachments )
+		html = ''
+
+		attachments.each do |a|
+			html += link_to(a.name, a.url)
+		end
+
+
+		html
+	end
     #form_tag(url_for_options = {}, options = {}, &block) ⇒ Object
 
 	# 	if object.active?

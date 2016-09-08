@@ -19,6 +19,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @attachments = @article.attachments
+    # @attachment_list = @attachments.map(&:name).join(',')
   end
 
   # GET /articles/new

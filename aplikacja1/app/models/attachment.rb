@@ -17,5 +17,6 @@ class Attachment < ActiveRecord::Base
   # validates :article_id, uniqueness: true
   validates :url, format: /http/
   belongs_to :article
+  has_many :attachment_id
   acts_as_list scope: :article_id
 end
